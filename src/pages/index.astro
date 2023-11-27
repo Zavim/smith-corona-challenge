@@ -2,6 +2,9 @@
 import "@fontsource-variable/open-sans";
 import { Image } from "astro:assets";
 import jam from "../images/jam.png";
+import lavender from "../images/lavender.png";
+import wine from "../images/wine.png";
+import bloom from "../images/bloom.png";
 ---
 
 <html lang="en">
@@ -15,7 +18,7 @@ import jam from "../images/jam.png";
   <body>
     <div class="overview section">
       <div class="overview-text-container">
-        <h1 class="overview-heading">PRODUCT OVERVIEW</h1>
+        <h1 class="overview-heading heading">PRODUCT OVERVIEW</h1>
         <p>
           Inket printing technology uses miniscule, liquid ink droplets that are
           propelled onto paper or other substrates during the printing process,
@@ -53,7 +56,7 @@ import jam from "../images/jam.png";
     <div class="specs">
       <div class="specs-container">
         <div class="specs-heading-container">
-          <h1>FULL SPECIFICATIONS</h1>
+          <h1 class="heading">FULL SPECIFICATIONS</h1>
           <h4>PRINT SPECS SHEET</h4>
         </div>
         <div class="specs-table">
@@ -118,11 +121,30 @@ import jam from "../images/jam.png";
     </div>
     <div class="inspo section">
       <div class="inspo-container">
-        <h1>PRINTED LABEL INSPIRATION</h1>
+        <h1 class="heading">PRINTED LABEL INSPIRATION</h1>
         <h3>
           In need of some inpiration? See how some of our customers are using
           their inkjet labels!
         </h3>
+        <div class="inspo-grid-container">
+          <div class="inspo-grid">
+            <Image
+              class=""
+              src={lavender}
+              alt="a bottle labeled Lavender Dreams Pillow & Room Mist"
+            />
+            <Image
+              class=""
+              src={bloom}
+              alt="a bottle of perfume labeled Sunset Blossom laying on rose petals"
+            />
+            <Image
+              class=""
+              src={wine}
+              alt="a bottle of wine labeled The Archer between a glass of wind and some grapes"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </body>
@@ -139,12 +161,14 @@ import jam from "../images/jam.png";
   body {
     font-family: "Open Sans Variable", sans-serif;
   }
+  .heading {
+    font-size: 2.5rem;
+  }
   .section {
     margin: 2.9% 9.98%;
   }
   .overview {
     display: flex;
-    /* margin: 2.9% 9.98%; */
   }
   .overview-text-container > p {
     padding-bottom: 1rem;
@@ -163,7 +187,6 @@ import jam from "../images/jam.png";
     padding: 4% 0 8%;
   }
   .specs-heading-container {
-    font-size: 1.25rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
