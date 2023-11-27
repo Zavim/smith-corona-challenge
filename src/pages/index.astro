@@ -1,16 +1,201 @@
 ---
-
+import "@fontsource-variable/open-sans";
+import { Image } from "astro:assets";
+import jam from "../images/jam.png";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Smith Corona Challenge</title>
+  </head>
+  <body>
+    <div class="overview section">
+      <div class="overview-text-container">
+        <h1 class="overview-heading">PRODUCT OVERVIEW</h1>
+        <p>
+          Inket printing technology uses miniscule, liquid ink droplets that are
+          propelled onto paper or other substrates during the printing process,
+          where they rapidly dry to produce high-quality, high-resolution
+          colorful text and images.
+        </p>
+        <p>
+          Dye-based inks are less expensive. They are able to produce more
+          vibrant colors when printing as the ink is absorbed into the fiber of
+          the material. Dye-based ink is ideal for printing costumer facing
+          product labels that require colorful text or images. Pigment-based
+          inks are more resilient when printing. The ink sits on the surface of
+          the material it is printed on and fuses with the fibers. Pigment-based
+          ink is ideal for printing durable labels such as GHS and BS 5609
+          compliant labels.
+        </p>
+        <p>
+          Inkjet printing supports roll and fanfold labels, as well as tags.
+          Roll labels must have a 3" core inner diameter. Perforated or non
+          perforated labels can be used as well as continuous labels. Many
+          inkjet labels support labels with glossy or matte finishes for
+          applications that require different vibrancy or reflectivity levels.
+          We carry various label sizes in different materials and colors to
+          ensure you are choosing the best label for your application.
+        </p>
+      </div>
+      <div class="overview-img-container">
+        <Image
+          class="overview-img"
+          src={jam}
+          alt="a jar with a printed label saying apricot jam"
+        />
+      </div>
+    </div>
+    <div class="specs">
+      <div class="specs-container">
+        <div class="specs-heading-container">
+          <h1>FULL SPECIFICATIONS</h1>
+          <h4>PRINT SPECS SHEET</h4>
+        </div>
+        <div class="specs-table">
+          <div class="specs-col left">
+            <div class="table-row">
+              <span class="table-label">PRINTER TECHNOLOGY</span>
+              <span class="table-data">Inkjet</span>
+            </div>
+            <div class="table-row">
+              <span class="table-label">COLOR</span>
+              <span class="table-data">White</span>
+            </div>
+            <div class="table-row">
+              <span class="table-label">WIDTH</span>
+              <span class="table-data">4"</span>
+            </div>
+            <div class="table-row">
+              <span class="table-label">LENGTH</span>
+              <span class="table-data">2"</span>
+            </div>
+            <div class="table-row">
+              <span class="table-label">PERFORATED</span>
+              <span class="table-data">YES</span>
+            </div>
+            <div class="table-row">
+              <span class="table-label">LABELS PER ROLL</span>
+              <span class="table-data">1245</span>
+            </div>
+            <div class="table-row last">
+              <span class="table-label">ROLLS PER BOX</span>
+              <span class="table-data">4</span>
+            </div>
+          </div>
+          <div class="specs-col">
+            <div class="table-row">
+              <span class="table-label">LABELS PER BOX</span>
+              <span class="table-data">4980</span>
+            </div>
+            <div class="table-row">
+              <span class="table-label">OUTER DIAMETER</span>
+              <span class="table-data">6"</span>
+            </div>
+            <div class="table-row">
+              <span class="table-label">CORE DIAMETER</span>
+              <span class="table-data">3"</span>
+            </div>
+            <div class="table-row">
+              <span class="table-label">PART NUMBER</span>
+              <span class="table-data">RIJ4020AP</span>
+            </div>
+            <div class="table-row">
+              <span class="table-label">MATERIAL</span>
+              <span class="table-data">Paper</span>
+            </div>
+            <div class="table-row last">
+              <span class="table-label">FINISH</span>
+              <span class="table-data">Gloss</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="inspo section">
+      <div class="inspo-container">
+        <h1>PRINTED LABEL INSPIRATION</h1>
+        <h3>
+          In need of some inpiration? See how some of our customers are using
+          their inkjet labels!
+        </h3>
+      </div>
+    </div>
+  </body>
 </html>
+
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  html {
+    font-size: 16px;
+  }
+  body {
+    font-family: "Open Sans Variable", sans-serif;
+  }
+  .section {
+    margin: 2.9% 9.98%;
+  }
+  .overview {
+    display: flex;
+    /* margin: 2.9% 9.98%; */
+  }
+  .overview-text-container > p {
+    padding-bottom: 1rem;
+  }
+  .overview-heading {
+    padding-bottom: 2rem;
+  }
+  .overview-img {
+    border-radius: 30px;
+  }
+  .specs {
+    background-color: blue;
+  }
+  .specs-container {
+    margin: 0 9.98%;
+    padding: 4% 0 8%;
+  }
+  .specs-heading-container {
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    padding-bottom: 2rem;
+  }
+  .specs-table {
+    font-size: 1.25rem;
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    position: static;
+    padding: 2rem 0;
+  }
+  .specs-col {
+    width: 33%;
+  }
+  .left {
+    margin-right: 5rem;
+  }
+  .table-row {
+    display: flex;
+    justify-content: space-between;
+    border-width: 1px;
+    border-style: none none solid;
+    padding: 0.25rem 0;
+  }
+  .last {
+    border-bottom: none;
+  }
+  .table-label {
+    font-weight: bold;
+  }
+</style>
