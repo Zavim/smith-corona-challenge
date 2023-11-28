@@ -1,4 +1,4 @@
-# Astro Starter Kit: Minimal
+# Zavier's Submission
 
 I completed this challenge using the native width of the design, 1440px.
 I highly recommend using your browser's settings to view it at this width for the best experience!
