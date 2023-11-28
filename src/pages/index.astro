@@ -123,7 +123,7 @@ import bloom from "../images/bloom.png";
       <div class="inspo-container">
         <h1 class="heading">PRINTED LABEL INSPIRATION</h1>
         <h3 class="inspo-subheading">
-          In need of some inpiration? See how some of our customers are using
+          In need of some inspiration? See how some of our customers are using
           their inkjet labels!
         </h3>
         <div class="inspo-grid-container">
@@ -152,6 +152,9 @@ import bloom from "../images/bloom.png";
           </div>
         </div>
       </div>
+      <div class="view-all-button-container">
+        <button class="view-all-button">VIEW ALL</button>
+      </div>
     </div>
   </body>
 </html>
@@ -171,14 +174,16 @@ import bloom from "../images/bloom.png";
     font-size: 2.5rem;
   }
   .section {
-    margin: 2.9% 9.98%;
+    margin: 0 9.98%;
   }
   .overview {
     display: flex;
-    align-items: center;
+    margin-top: 4.5rem;
+    padding-bottom: 6rem;
   }
   .overview-text-container {
-    flex-basis: 60%;
+    flex-basis: 72%;
+    padding-right: 4rem;
   }
   .overview-text-container > p {
     padding-bottom: 1rem;
@@ -189,10 +194,13 @@ import bloom from "../images/bloom.png";
     padding-bottom: 2rem;
   }
   .overview-img {
-    border-radius: 30px;
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .specs {
-    background-color: blue;
+    background: linear-gradient(0.25turn, #113f8c, #51b7dd 35% 75%, #113f8c);
   }
   .specs-container {
     margin: 0 9.98%;
@@ -215,10 +223,10 @@ import bloom from "../images/bloom.png";
     padding: 3rem 0;
   }
   .specs-col {
-    width: 33%;
+    width: 38%;
   }
   .left {
-    margin-right: 8rem;
+    margin-right: 5rem;
   }
   .table-row {
     display: flex;
@@ -239,6 +247,9 @@ import bloom from "../images/bloom.png";
   .inspo-subheading {
     margin-top: 0.5rem;
   }
+  .inspo-container {
+    padding-bottom: 3rem;
+  }
   .inspo-grid-container {
     margin-top: 3rem;
   }
@@ -252,5 +263,20 @@ import bloom from "../images/bloom.png";
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
+    box-shadow: 0 8px 5px hsla(0, 0%, 0%, 0.2);
+  }
+  .view-all-button-container {
+    display: flex;
+    justify-content: center;
+  }
+  .view-all-button {
+    font-size: 1.25rem;
+    color: #fff;
+    background-color: #3673aa;
+    border: none;
+    border-radius: 30px;
+    padding: 0.75rem 5.5rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
   }
 </style>
