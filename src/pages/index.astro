@@ -122,27 +122,33 @@ import bloom from "../images/bloom.png";
     <div class="inspo section">
       <div class="inspo-container">
         <h1 class="heading">PRINTED LABEL INSPIRATION</h1>
-        <h3>
+        <h3 class="inspo-subheading">
           In need of some inpiration? See how some of our customers are using
           their inkjet labels!
         </h3>
         <div class="inspo-grid-container">
           <div class="inspo-grid">
-            <Image
-              class=""
-              src={lavender}
-              alt="a bottle labeled Lavender Dreams Pillow & Room Mist"
-            />
-            <Image
-              class=""
-              src={bloom}
-              alt="a bottle of perfume labeled Sunset Blossom laying on rose petals"
-            />
-            <Image
-              class=""
-              src={wine}
-              alt="a bottle of wine labeled The Archer between a glass of wind and some grapes"
-            />
+            <div class="inspo-pic-container">
+              <Image
+                class="inspo-pic"
+                src={lavender}
+                alt="a bottle labeled Lavender Dreams Pillow & Room Mist"
+              />
+            </div>
+            <div class="inspo-pic-container">
+              <Image
+                class="inspo-pic"
+                src={bloom}
+                alt="a bottle of perfume labeled Sunset Blossom laying on rose petals"
+              />
+            </div>
+            <div class="inspo-pic-container">
+              <Image
+                class="inspo-pic"
+                src={wine}
+                alt="a bottle of wine labeled The Archer between a glass of wind and some grapes"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -169,9 +175,15 @@ import bloom from "../images/bloom.png";
   }
   .overview {
     display: flex;
+    align-items: center;
+  }
+  .overview-text-container {
+    flex-basis: 60%;
   }
   .overview-text-container > p {
     padding-bottom: 1rem;
+    font-size: 1.25rem;
+    line-height: 2.5rem;
   }
   .overview-heading {
     padding-bottom: 2rem;
@@ -200,13 +212,13 @@ import bloom from "../images/bloom.png";
     display: flex;
     justify-content: center;
     position: static;
-    padding: 2rem 0;
+    padding: 3rem 0;
   }
   .specs-col {
     width: 33%;
   }
   .left {
-    margin-right: 5rem;
+    margin-right: 8rem;
   }
   .table-row {
     display: flex;
@@ -220,5 +232,25 @@ import bloom from "../images/bloom.png";
   }
   .table-label {
     font-weight: bold;
+  }
+  .inspo {
+    margin-top: 5rem;
+  }
+  .inspo-subheading {
+    margin-top: 0.5rem;
+  }
+  .inspo-grid-container {
+    margin-top: 3rem;
+  }
+  .inspo-grid {
+    display: grid;
+    grid: auto-flow / 1fr 1.2fr 1fr;
+    column-gap: 2rem;
+  }
+  .inspo-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
   }
 </style>
